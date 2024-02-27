@@ -17,6 +17,7 @@ filters:
   - code-fullscreen
 ---
 
+
 ## What I'll cover
 
 -   Quarto slides as teaching tools
@@ -220,24 +221,31 @@ And more:
 
 Code chunks have options just like in RMarkdown. You can just have the code without running it:
 
+
 ```{r, eval=FALSE, echo=TRUE}
 mod <- lm(mpg ~ cyl, data = mtcars)
 ```
 
+
 Or you can output the results, without including code:
+
 
 ```{r, eval=TRUE, echo=FALSE}
 mod <- lm(mpg ~ cyl, data = mtcars)
 print(mod)
 ```
 
+
 Or both:
+
 
 ```{r, eval=TRUE, echo=TRUE}
 mod$coefficients
 ```
 
+
 ## Other languages
+
 
 ```{python}
 #| label: fig-polar
@@ -256,6 +264,7 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
 ```
+
 
 <!-- ## Other languages -->
 
@@ -283,12 +292,15 @@ plt.show()
 
 ## Code chunks animation {auto-animate="true"}
 
+
 ```{r, eval=TRUE, echo=TRUE}
 # Start with simple plot
 plot(mtcars$cyl, mtcars$mpg)
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
+
 
 ```{r, eval=TRUE, echo=TRUE}
 # Start with simple plot
@@ -297,9 +309,11 @@ plot(mtcars$cyl, mtcars$mpg)
 abline(mod)
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
 
 We can use animations to show how code is written sequentially
+
 
 ```{r, eval=FALSE, echo=TRUE}
 # Start with simple plot
@@ -308,9 +322,11 @@ plot(mtcars$cyl, mtcars$mpg)
 abline(mod)
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
 
 We can use animations to show how code is written sequentially
+
 
 ```{r, eval=FALSE, echo=TRUE}
 # Start with simple plot
@@ -324,9 +340,11 @@ make_plot <- function(x, y, model) {
 }
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
 
 We can use animations to show how code is written sequentially
+
 
 ```{r, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "8-9"
@@ -342,9 +360,11 @@ make_plot <- function(x, y, model) {
 }
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
 
 We can use animations to show how code is written sequentially
+
 
 ```{r, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "8-9"
@@ -360,9 +380,11 @@ make_plot <- function(x, y, model) {
 }
 ```
 
+
 ## Code chunks animation {auto-animate="true"}
 
 We can use animations to show how code is written sequentially
+
 
 ```{r, eval=TRUE, echo=TRUE}
 # Create an empty fucntion:
@@ -374,6 +396,7 @@ make_plot <- function(x, y, model) {
 # Call the function
 make_plot(mtcars$cyl, mtcars$mpg, mod)
 ```
+
 
 ## Useful extensions
 
@@ -404,6 +427,7 @@ plot(mod)
 -   To achieve parity with base R, the Available R packages metric serves as an indicator of whether R scripts may require further modification to function properly within webR.
 
 ## Packages available with webr
+
 
 ```{r, eval=TRUE, echo=TRUE}
 #| code-fold: true
@@ -437,6 +461,7 @@ cat("There are current", n_webr_pkgs,
 head(webr_info[, c("Version", "License")], n = 15)
 ```
 
+
 ## Loading packages
 
 To automatically install packages when the document opens, packages can be specidied in the document header.
@@ -463,4 +488,5 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 -  output (echo: false): Suppress showing code, but display the results
 
 -  setup (include: false): Suppress showing both code and results
+
 

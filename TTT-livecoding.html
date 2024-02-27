@@ -556,7 +556,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"id":1,"options":{"label":"unnamed-chunk-1","message":"true","output":"true","out-width":"700px","warning":"true","autorun":"false","dpi":72,"fig-width":7,"classes":"","fig-cap":"","results":"markup","comment":"","fig-height":5,"read-only":"false","context":"interactive","out-height":""},"code":"mod <- lm(mpg ~ cyl, data = mtcars)\ncoefficients(mod)\nplot(mod)"},{"id":2,"options":{"label":"unnamed-chunk-2","message":"true","output":"true","out-width":"700px","warning":"true","autorun":"false","dpi":72,"fig-width":7,"classes":"","fig-cap":"","results":"markup","comment":"","fig-height":5,"read-only":"false","context":"interactive","out-height":""},"code":"webr::install(\"ggplot2\")\n\nlibrary(\"ggplot2\")\n\nggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point()"}];
+  globalThis.qwebrCellDetails = [{"id":1,"code":"mod <- lm(mpg ~ cyl, data = mtcars)\ncoefficients(mod)\nplot(mod)","options":{"output":"true","out-width":"700px","context":"interactive","read-only":"false","fig-cap":"","message":"true","autorun":"false","label":"unnamed-chunk-1","comment":"","results":"markup","dpi":72,"fig-height":5,"warning":"true","fig-width":7,"classes":"","out-height":""}},{"id":2,"code":"webr::install(\"ggplot2\")\n\nlibrary(\"ggplot2\")","options":{"output":"true","out-width":"700px","context":"interactive","read-only":"false","fig-cap":"","message":"true","autorun":"false","label":"unnamed-chunk-2","comment":"","results":"markup","dpi":72,"fig-height":5,"warning":"true","fig-width":7,"classes":"","out-height":""}},{"id":3,"code":"ggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point()","options":{"output":"true","out-width":"700px","context":"interactive","read-only":"false","fig-cap":"","message":"true","autorun":"false","label":"unnamed-chunk-3","comment":"","results":"markup","dpi":72,"fig-height":5,"warning":"true","fig-width":7,"classes":"","out-height":""}}];
 
   </script>
   <script type="module">
@@ -1877,6 +1877,19 @@ abcrf             1.9         GPL (&gt;= 2)</code></pre>
 <p>To install and load interactively:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="using-installed-packages" class="slide level2">
+<h2>Using installed packages</h2>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="using-the-context-option" class="slide level2">
+<h2>Using the context Option</h2>
+<ul>
+<li><p>interactive (include: true): Show both code and results</p></li>
+<li><p>output (echo: false): Suppress showing code, but display the results</p></li>
+<li><p>setup (include: false): Suppress showing both code and results</p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
